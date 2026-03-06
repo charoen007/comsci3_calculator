@@ -11,23 +11,25 @@ def menu():
     print("6. Square Root")
     print("7. Exit")
 
-# Calculation functions # Addition the numbers
+# Calculation functions ----------------------------
+
+# Addition the numbers
 def addition():
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
-    print("Result:", num1 + num2)
-    
+    print(f"Result: {num1} + {num2} = {num1 + num2}")
+
 # Subtraction the numbers
 def subtraction():
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
-    print("Result:", num1 - num2)
-    
+    print(f"Result: {num1} - {num2} = {num1 - num2}")
+
 # Multiply the numbers
 def multiplication():
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
-    print("Result:", num1 * num2)
+    print(f"Result: {num1} × {num2} = {num1 * num2}")  
     
 # Division the numbers
 def division():
@@ -36,25 +38,26 @@ def division():
     if num2 == 0:
         print("Error: Cannot divide by zero")
     else:
-        print("Result:", num1 / num2)
-        
+        print(f"Result: {num1} ÷ {num2} = {num1 / num2}")   
+
 # Second_power the numbers
 def second_power():
     num = float(input("Enter a number: "))
-    print("Result:", num ** 2)
-    
+    print(f"Result: {num}^2 = {num ** 2}")
+
 # Square_root the numbers
 def square_root():
     num = float(input("Enter a number: "))
     if num < 0:
         print("Error: Cannot take square root of negative number")
     else:
-        print("Result:", math.sqrt(num))
+        print(f"Result: √{num} = {math.sqrt(num)}")        
+# -----------------------------------------------------
 
-
-# Main program # Calculate on your choose
+# Main program 
+# Calculate on your choose
 def main():
-    while True:
+    while True:  # do loop until press 7
         menu()
         choice = input("Choose an option (1-7): ")
 
@@ -72,9 +75,8 @@ def main():
             square_root()
         elif choice == "7":
             print("Exiting calculator...")
-            break
+            break  
         else:
             print("Invalid choice. Please select 1-7.")
-
 
 main()
